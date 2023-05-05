@@ -75,7 +75,3 @@ router.get('/verify-password',(req,res)=>{
     res.send('password verify succesfully')
 
 })
-     
-
-
-module.exports = router;
