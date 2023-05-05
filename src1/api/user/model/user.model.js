@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+import state from'./userstate.model'
+import country from'./usercountry'
 var validate = require("mongoose-validator");
 const userSchema = new mongoose.Schema(
   {
