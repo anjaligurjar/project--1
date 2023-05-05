@@ -60,8 +60,12 @@ const userSchema = new mongoose.Schema({
     required: [true,],
   }
 });
-userSchema.path('name').set(function(v) {
+userSchema.path('email').set(function(v) {
   return capitalize(v);
+});
+userSchema.pre('save', function(next) {
+  notify(this.get('email'));
+  next();
 });
 
 module.exports = mongoose.model("user", userSchema);
