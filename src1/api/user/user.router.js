@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('./user.db.js');
-const UserModel = require('./user.model');
+const UserModel = require('./model/user.model.js');
 const userAuth = require('./user.auth');
 
 const { JsonWebTokenError, verify } = require('jsonwebtoken');
